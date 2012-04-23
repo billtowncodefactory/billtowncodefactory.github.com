@@ -1,0 +1,16 @@
+---
+layout: default
+title: Latest
+---
+
+<h1>Latest Activity</h1>
+
+<ol class="latest_posts">
+  {% for post in site.posts %}
+  <li>
+    <span class="post_date">{{ post.date | date_to_string }}</span>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ol>
+
